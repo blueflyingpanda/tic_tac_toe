@@ -1,0 +1,21 @@
+.grid-container {
+	margin-top: 25vh;
+	justify-content: center;
+	display: grid;
+	grid-template-columns: auto auto auto;
+}
+
+img{
+	width: 10vh;
+	height: 10vh;
+}
+
+.grid-item {
+	border: 3px solid rgba(0, 0, 0, 0.8);
+	width: 10vh;
+	height: 10vh;
+}
+
+h1{
+	text-align: center;
+}
