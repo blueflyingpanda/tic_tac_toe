@@ -1,5 +1,10 @@
 var fields = document.getElementsByClassName("symbol");
 var isCross = true;
+var movesMade = 0;
+
+function showDraw(){
+	document.getElementById("statement").textContent = "Draw!";
+}
 
 function showWinner(pic, option){
 	switch (option) {
@@ -77,6 +82,9 @@ function checkEndGame(isCross_local){
 		showWinner(pic, 6);
 	else if (fields[2].ocupat == pic && fields[4].ocupat == pic && fields[6].ocupat == pic)
 		showWinner(pic, 7);
+	//No fields left
+	else if (++movesMade == 9)
+		showDraw();
 }
 
 function placeSymbol(index){
